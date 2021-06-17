@@ -6,7 +6,7 @@
 * Jumper Wires
 * Breadboard (optional)
 
-(https://maker.pro/storage/gE9cacR/gE9cacRYNOuescYwhyRkVDxiCUtGkm84VbJfOkN7.jpeg)
+[[https://maker.pro/storage/gE9cacR/gE9cacRYNOuescYwhyRkVDxiCUtGkm84VbJfOkN7.jpeg]]
 
 ## Required Software
 
