@@ -4,7 +4,7 @@
 * NodeMCU ESP8266
 * MAX7219 dot matrix
 * Jumper Wires
-* Breabdboard (optional)
+* Breadboard (optional)
 
 (https://maker.pro/storage/gE9cacR/gE9cacRYNOuescYwhyRkVDxiCUtGkm84VbJfOkN7.jpeg)
 
