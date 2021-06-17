@@ -69,18 +69,22 @@ With the second variable, `MAX_DEVICES`, you set the number of 8×8 dot matrix d
 ## Scrolling Text
 
 ````
-/ Including the required Arduino libraries
+// Program to demonstrate the MD_Parola library
+//
+// Simplest program that does something useful - Hello World!
+//
+
 #include <MD_Parola.h>
 #include <MD_MAX72xx.h>
 #include <SPI.h>
 
-// Uncomment according to your hardware type
+// Define the number of devices we have in the chain and the hardware interface
+// NOTE: These pin numbers are for NodeMCU
 #define HARDWARE_TYPE MD_MAX72XX::FC16_HW
-//#define HARDWARE_TYPE MD_MAX72XX::GENERIC_HW
-
-// Defining size, and output pins
 #define MAX_DEVICES 4
-#define CS_PIN 3
+#define CLK_PIN   D5
+#define DATA_PIN  D7
+#define CS_PIN    D4
 
 // Create a new instance of the MD_Parola class with hardware SPI connection
 MD_Parola myDisplay = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
