@@ -8,10 +8,6 @@
 #include <MD_Parola.h>
 #include <MD_MAX72xx.h>
 #include <SPI.h>
-#include <ESP8266WiFi.h>
-
-const char* ssid = "Babolat";
-const char* password = "doraemon";
 
 // Define the number of devices we have in the chain and the hardware interface
 // NOTE: These pin numbers will probably not work with your hardware and may
