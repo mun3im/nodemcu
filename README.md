@@ -54,6 +54,21 @@ But before you proceed to upload the sketch, you need to make some changes to ma
 
 ![first-sketch](https://lastminuteengineers.com/wp-content/uploads/arduino/Changes-to-make.png)
 
-The first variable, HARDWARE_TYPE, tells the arduino which version of the module you are using.
+The first variable, `HARDWARE_TYPE`, tells the arduino which version of the module you are using.
+
+* Set the `HARDWARE_TYPE` to `GENERIC_HW`, if you are using a module that usually comes with a green PCB and a through hole MAX7219 IC, as shown below.
+
+![generic](https://lastminuteengineers.com/wp-content/uploads/arduino/MAX7219-Generic-Module.jpg)
+
+* Set the `HARDWARE_TYPE` to `FC16_HW`, if you are using a module that usually comes with a blue PCB and a SMD MAX7219 IC as shown below.
+
+![fc16](https://lastminuteengineers.com/wp-content/uploads/arduino/MAX7219-FC-16-Module.jpg)
+
+With the second variable, `MAX_DEVICES`, you set the number of 8×8 dot matrix displays being used. An 8×8 matrix counts as 1 device, so if you want to control an 8×32 module you must set `MAX_DEVICES` to 4 (an 8×32 display contains 4 MAX7219 ICs).
+
+
+
+
+
 
 
