@@ -7,3 +7,10 @@
 * Breabdboard (optional)
 
 (https://maker.pro/storage/gE9cacR/gE9cacRYNOuescYwhyRkVDxiCUtGkm84VbJfOkN7.jpeg)
+
+## Required Software
+
+* Arduino IDE
+* MAX72xx library (https://github.com/markruys/arduino-Max72xxPane)
+
+## Connecting the Hardware
