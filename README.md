@@ -1,4 +1,4 @@
-# Scrolling Text on 8x32 LED using NodeMCU 
+# Scrolling Text on Dot Matrix Display using NodeMCU 
 ## Required Hardware
 
 * NodeMCU ESP8266
@@ -45,3 +45,15 @@ This MD_MAX72XX library is a hardware-specific library which handles lower-level
 It needs to be paired with MD_Parola Library to create many different text animations like scrolling and sprite text effects. Install this library and it will ask you to install the MD_MAX72XX library due to the dependency.
 
 ![tools-com3](https://lastminuteengineers.com/wp-content/uploads/arduino/MD_Parola-Library-Installation.png)
+
+## Basic Code – Printing Text
+
+We will print a simple text on the display without any animation.
+
+But before you proceed to upload the sketch, you need to make some changes to make it work for you. You must modify the following two variables.
+
+![first-sketch](https://lastminuteengineers.com/wp-content/uploads/arduino/Changes-to-make.png)
+
+The first variable, HARDWARE_TYPE, tells the arduino which version of the module you are using.
+
+
