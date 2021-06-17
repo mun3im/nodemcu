@@ -66,8 +66,35 @@ The first variable, `HARDWARE_TYPE`, tells the arduino which version of the modu
 
 With the second variable, `MAX_DEVICES`, you set the number of 8×8 dot matrix displays being used. An 8×8 matrix counts as 1 device, so if you want to control an 8×32 module you must set `MAX_DEVICES` to 4 (an 8×32 display contains 4 MAX7219 ICs).
 
+## Scrolling Text
 
+````
+/ Defining size, and output pins
+#define MAX_DEVICES 4
+#define CS_PIN 3
 
+// Create a new instance of the MD_Parola class with hardware SPI connection
+MD_Parola myDisplay = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
+
+void setup() {
+	// Intialize the object
+	myDisplay.begin();
+
+	// Set the intensity (brightness) of the display (0-15)
+	myDisplay.setIntensity(0);
+
+	// Clear the display
+	myDisplay.displayClear();
+
+	myDisplay.displayScroll("Hello", PA_CENTER, PA_SCROLL_LEFT, 100);
+}
+
+void loop() {
+	if (myDisplay.displayAnimate()) {
+		myDisplay.displayReset();
+	}
+}
+````
 
 
 
