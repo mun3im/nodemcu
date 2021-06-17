@@ -69,7 +69,16 @@ With the second variable, `MAX_DEVICES`, you set the number of 8×8 dot matrix d
 ## Scrolling Text
 
 ````
-/ Defining size, and output pins
+/ Including the required Arduino libraries
+#include <MD_Parola.h>
+#include <MD_MAX72xx.h>
+#include <SPI.h>
+
+// Uncomment according to your hardware type
+#define HARDWARE_TYPE MD_MAX72XX::FC16_HW
+//#define HARDWARE_TYPE MD_MAX72XX::GENERIC_HW
+
+// Defining size, and output pins
 #define MAX_DEVICES 4
 #define CS_PIN 3
 
