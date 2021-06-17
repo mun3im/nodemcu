@@ -68,10 +68,14 @@ With the second variable, `MAX_DEVICES`, you set the number of 8×8 dot matrix d
 
 ## Scrolling Text
 
+### The following code is a duplicte of the C file in this directory.
+
 ````
 // Program to demonstrate the MD_Parola library
 //
 // Simplest program that does something useful - Hello World!
+//
+// MD_MAX72XX library can be found at https://github.com/MajicDesigns/MD_MAX72XX
 //
 
 #include <MD_Parola.h>
@@ -79,33 +83,32 @@ With the second variable, `MAX_DEVICES`, you set the number of 8×8 dot matrix d
 #include <SPI.h>
 
 // Define the number of devices we have in the chain and the hardware interface
-// NOTE: These pin numbers are for NodeMCU
+// NOTE: These pin numbers will probably not work with your hardware and may
+// need to be adapted
 #define HARDWARE_TYPE MD_MAX72XX::FC16_HW
 #define MAX_DEVICES 4
 #define CLK_PIN   D5
 #define DATA_PIN  D7
 #define CS_PIN    D4
 
-// Create a new instance of the MD_Parola class with hardware SPI connection
-MD_Parola myDisplay = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
+// Hardware SPI connection
+MD_Parola P = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
+// Arbitrary output pins
+// MD_Parola P = MD_Parola(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_DEVICES);
 
-void setup() {
-	// Intialize the object
-	myDisplay.begin();
+void setup(void)
+{
+  P.begin();
+  P.setIntensity(0);
+  P.displayClear();
+  P.displayScroll("Hello World", PA_CENTER, PA_SCROLL_LEFT, 100);
 
-	// Set the intensity (brightness) of the display (0-15)
-	myDisplay.setIntensity(0);
-
-	// Clear the display
-	myDisplay.displayClear();
-
-	myDisplay.displayScroll("Hello", PA_CENTER, PA_SCROLL_LEFT, 100);
 }
 
-void loop() {
-	if (myDisplay.displayAnimate()) {
-		myDisplay.displayReset();
-	}
+void loop(void)
+{
+  if (P.displayAnimate())
+    P.displayReset();
 }
 ````
 
