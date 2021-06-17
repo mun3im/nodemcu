@@ -15,7 +15,10 @@
 
 ## Connecting the Hardware
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| LED Matrix  | ESP8266 |
+| ----------- | ----|
+| Vcc         | 3V  |
+| GND         | G   |
+| DIN         | D7  |
+| CS          | D4  |
+| CLK         | D5  |
