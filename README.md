@@ -1,4 +1,4 @@
-# This repo contains code for my new ESP8266 v3 board
+# Scrolling Text on 8x32 LED using NodeMCU 
 ## Required Hardware
 
 * NodeMCU ESP8266
