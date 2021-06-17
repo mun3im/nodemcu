@@ -22,3 +22,10 @@
 | DIN         | D7  |
 | CS          | D4  |
 | CLK         | D5  |
+
+## Setting Up Arduino IDE
+
+Open Arduino IDE and install the libraries listed earlier in this tutorial
+
+![tools-board](https://maker.pro/storage/uYyxUR5/uYyxUR52mOpeOgZluAU1xCaQLGYnwLilSoBdeySs.jpeg)
+![tools-com3](https://maker.pro/storage/KrmoS6n/KrmoS6nWSzrXfkQyCnhtjDB8UmfKDaKbbeTPmyTE.jpeg)
